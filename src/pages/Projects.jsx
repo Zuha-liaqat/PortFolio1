@@ -2,7 +2,7 @@ const projects = [
   {
     title: "Authentication System (MERN Stack)",
     description: "Developed user authentication system using Node.js, Express, MongoDB, and JWT.Implemented Signup, Login, and Edit Profile functionality with secure password hashing.Integrated APIs with a React frontend for real-time data update.Managed authentication tokens using JWT and localStorage.",
-    link: "https://reactproject-lemon-seven.vercel.app/",
+    link: "https://first-project-pi-orpin.vercel.app/",
     FrontendRepository: "https://github.com/Zuha-liaqat/Frontend",
     BackendRepository:"https://github.com/Zuha-liaqat/NODEJS-PROJECT"
   },
