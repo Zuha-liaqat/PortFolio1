@@ -1,7 +1,7 @@
 const projects = [
   {
-    title: "Authentication System (MERN Stack)",
-    description: "Developed user authentication system using Node.js, Express, MongoDB, and JWT.Implemented Signup, Login, and Edit Profile functionality with secure password hashing.Integrated APIs with a React frontend for real-time data update.Managed authentication tokens using JWT and localStorage.",
+    title: "Fast Food Ordering Web App",
+    description: "Developed a fast food ordering web app with wishlist, cart, order placement (email confirmation via Resend), and admin CRUD functionality. Built using React, TailwindCSS, Node.js/Express, and MongoDB with responsive design in Figma.",
     link: "https://first-project-pi-orpin.vercel.app/",
     FrontendRepository: "https://github.com/Zuha-liaqat/FirstProject",
     BackendRepository:"https://github.com/Zuha-liaqat/NODEJS-PROJECT"
