@@ -1,10 +1,15 @@
 const projects = [
   {
     title: "Fast Food Ordering Web App",
-    description: "Developed a fast food ordering web app with wishlist, cart, order placement (email confirmation via Resend), and admin CRUD functionality. Built using React, TailwindCSS, Node.js/Express, and MongoDB with responsive design in Figma.",
+    description:
+      "Developed a fast food ordering web app with wishlist, cart, order placement (email confirmation via Resend), and admin CRUD functionality. Built using React, TailwindCSS, Node.js/Express, and MongoDB with responsive design in Figma.",
     link: "https://first-project-pi-orpin.vercel.app/",
     FrontendRepository: "https://github.com/Zuha-liaqat/FirstProject",
-    BackendRepository:"https://github.com/Zuha-liaqat/NODEJS-PROJECT"
+    BackendRepository: "https://github.com/Zuha-liaqat/NODEJS-PROJECT",
+    adminCredentials: {
+      email: "admin@example.com",
+      password: "123@456",
+    },
   },
   {
     title: "Figma Designs",
@@ -32,10 +37,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-16 px-6 bg-gray-100 dark:bg-gray-800"
-    >
+    <section id="projects" className="py-16 px-6 bg-gray-100 dark:bg-gray-800">
       <h2 className="text-3xl font-bold mb-8">Projects</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {projects.map((p, index) => (
@@ -48,8 +50,16 @@ export default function Projects() {
               {p.description}
             </p>
 
+            {/* ✅ Show Admin Credentials if available */}
+            {p.adminCredentials && (
+              <div className="mt-4 text-sm text-gray-700 dark:text-gray-300">
+                <p className="font-semibold text-lg"> Demo Admin Login:</p>
+                <p>Email: {p.adminCredentials.email}</p>
+                <p>Password: {p.adminCredentials.password}</p>
+              </div>
+            )}
+
             <div className="mt-4 flex flex-col gap-2">
-            
               {p.links ? (
                 p.links.map((link, i) => (
                   <a
@@ -62,8 +72,7 @@ export default function Projects() {
                   </a>
                 ))
               ) : (
-             
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                   <a
                     href={p.link}
                     target="_blank"
@@ -78,7 +87,7 @@ export default function Projects() {
                   >
                     Frontend Repository
                   </a>
-                   <a
+                  <a
                     href={p.BackendRepository}
                     target="_blank"
                     className="text-[#32a4c3] hover:underline"
